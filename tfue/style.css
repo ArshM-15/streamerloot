@@ -1,0 +1,2417 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+html,body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  overflow: scroll;
+}
+
+.homepage {
+  background: rgb(151,27,235);
+  background: linear-gradient(90deg, rgba(151,27,235,1) 6%, rgba(135,29,233,1) 47%, rgba(128,30,232,1) 65%, rgba(76,48,199,1) 100%);
+  padding-bottom: 100px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 1150px;
+  /* align-items: center; */
+  /* padding: 30px 10%; */
+   padding-top: 40px;  
+}
+
+nav a {
+  all: unset;
+  font-size: 125%;
+  cursor: pointer;
+  color: white;
+  padding: 5px 10px;
+  height: 22px;
+}
+nav a:hover {
+  color: rgb(170, 62, 235);
+  background-color: white;
+  margin: none;
+  border-radius: 100px;
+  transition: 700ms;
+}
+
+nav a:nth-of-type(3):hover {
+  color: white;
+  background-color: inherit;
+  border-radius: 0;
+  transition: 0;
+}
+
+nav .a2:hover {
+  color: rgba(71,35,227,1);
+}
+
+
+
+.logo-icon {
+  position: absolute;
+  height: 1.7em;
+  width: 1.7em;
+  left: -4rem;
+  bottom: 0.4rem;
+}
+
+nav h1 {
+  position: relative;
+  font-size: 180%;
+  line-height: 1.5em;
+  margin-left: 72px;
+  bottom: 1.4rem;
+  color: white;
+  font-weight:bolder;
+}
+
+nav h1:hover {
+  cursor: default;
+}
+
+/* Nav for Mobile */
+
+.nav-mobile {
+  display: none;
+}
+#menu a {
+  text-decoration: none;
+  color: #8a8a8c;
+  opacity:1;
+  font-family: 'Poppins', sans serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  transition: 200ms;
+}
+
+/* .a4 {
+    border-bottom: 1px rgb(194, 194, 194) solid;
+
+} */
+
+#menu a:hover {
+  opacity:0.5;
+}
+
+#menuToggle ul {
+  padding: 0;
+  list-style-type: none;
+  padding-top: 90px;
+}
+
+.nav-mobile {
+  height: 65px;
+}
+
+
+#menuToggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  width: 300px;
+}
+
+#menuToggle input
+{
+  display: flex;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span
+{
+  display: flex;
+  width: 29px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+  top: 0.4rem;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: #8a8a8c;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.5); 
+  border-bottom-right-radius: 25px;
+  margin: -50px 0 0 -50px;
+  padding-top: 52px;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  transition-delay: 2s;
+  /* padding-top: 10px; */
+  padding-left: 3rem;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+/* Nav for Mobile ends */
+
+/* .tfue-intro {
+  display: inline-flex;
+    margin: auto;
+    width: 1250px;
+    margin-top: 130px;
+    background-color: white;
+    padding: 20px 0;
+    border-radius: 50px;
+}
+
+.tfue-img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-left: 50px;
+    border: 3.5px solid rgb(151,27,235);
+}
+
+.tfue-intro h1 {
+    display: inline-flex;
+    font-size: 300%;
+    margin-right: 70px;
+    padding-left: 20px;
+}
+
+.tfue-about {
+  all:unset;
+  width: 500px;
+  display: inline-flex; 
+  flex-direction: column;
+} */
+
+.tfue-box-tablet-mobile {
+  display: none;
+}
+
+.tfue-box {
+  display: flex;
+  justify-content: center;
+}
+
+.tfue-info {
+  display: inline-flex; 
+  justify-content: space-between; 
+  width: 1250px;
+  margin-top: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  padding: 20px 0;
+  border-radius: 50px;
+}
+
+.tfue-info h1 {
+  font-size: 200%;
+  margin-right: 70px;
+  /* padding-left: 20px; */
+}
+
+.tfue-info h1:hover {
+  cursor: default;
+}
+
+.tfue-img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-left: 50px;
+}
+
+.tfue-about {
+  display: inline-flex; 
+  flex-direction: column;
+  margin-top: 20px;
+  margin-right: 40px;
+}
+
+.tfue-about p {
+  text-align:left;
+  margin-top: 35px;
+  width: 900px;
+  line-height: 25px;
+  color: #616161;
+}
+
+.tfue-about p:hover {
+  cursor: default;
+}
+
+.main-page-info {
+  margin-top: 50px;
+}
+
+/* Gaming Gear  */
+
+.gaming-gear-box {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.gaming-gear-title {
+  display: flex;
+  justify-content: center;
+  font-size: 200%;
+  padding-bottom: 10px;
+  border-bottom: 3px solid rgb(151,27,235);
+  width: 350px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.gaming-gear-title:hover {
+  cursor: default;
+}
+
+.gaming-gear {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  box-sizing:content-box;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5); 
+   /* box-shadow: 0 15px 25px 3px rgba(0, 0, 0, 0.25);   */
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.gaming-gear h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 150%;
+  margin: auto;
+  margin-top: 10px;
+  border-bottom: 2px solid  rgba(71,35,227,1);
+  height: 30px;
+  width: 150px;
+}
+
+.gaming-gear h3:hover {
+  cursor: default;
+}
+
+.gaming-gear-img {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  width: 125px;
+  margin-top: 10px;
+}
+
+.gaming-gear p {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 90%;
+  color: #616161;
+  text-align: center;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  line-height: 20px;
+}
+
+.gaming-gear p:hover {
+  cursor: default;
+}
+
+.gaming-gear-a {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 5px 10px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, rgba(151,27,235,1) 6%, rgba(135,29,233,1) 47%, rgba(128,30,232,1) 65%, rgba(76,48,199,1) 100%);
+  color: white;
+  height: 16px;
+  margin: auto;
+  margin-top: 50px;
+  width: 100px;
+  font-size: 90%;
+}
+
+.gaming-gear a:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.gaming-gear:nth-of-type(5) {
+  margin-right: auto;
+}
+
+/* PC Gear  */
+
+.PC-gear-box {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.PC-gear-title {
+  display: flex;
+  justify-content: center;
+  font-size: 200%;
+  padding-bottom: 10px;
+  border-bottom: 3px solid rgb(151,27,235);
+  width: 350px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.PC-gear-title:hover {
+  cursor: default;
+}
+
+.PC-gear {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  box-sizing:content-box;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5); 
+   /* box-shadow: 0 15px 25px 3px rgba(0, 0, 0, 0.25);   */
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.PC-gear h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 150%;
+  margin: auto;
+  margin-top: 10px;
+  border-bottom: 2px solid  rgba(71,35,227,1);
+  height: 30px;
+  width: 160px;
+}
+
+.PC-gear h3:hover {
+  cursor: default;
+}
+
+.PC-gear-img {
+  margin: auto;
+  display: flex;
+  justify-content: center; 
+  height: 150px;
+  width: 125px;
+  margin-top: 10px;
+}
+
+.PC-gear p {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 90%;
+  color: #616161;
+  line-height: 20px;
+  text-align: center;
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+}
+
+.PC-gear p:hover {
+  cursor: default;
+}
+
+.PC-gear:nth-of-type(4) p {
+  top: 70%;
+}
+
+.PC-gear-a {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 5px 10px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, rgba(151,27,235,1) 6%, rgba(135,29,233,1) 47%, rgba(128,30,232,1) 65%, rgba(76,48,199,1) 100%);
+  color: white;
+  height: 16px;
+  margin: auto;
+  margin-top: 50px;
+  width: 100px;
+  font-size: 90%;
+}
+
+.PC-gear-a:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.PC-gear:nth-of-type(10) {
+  margin-right: auto;
+  margin-left: 38px;
+}
+
+/* Streaming-gear */
+
+
+.Streaming-gear-box {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.Streaming-gear-title {
+  display: flex;
+  justify-content: center;
+  font-size: 200%;
+  padding-bottom: 10px;
+  border-bottom: 3px solid rgb(151,27,235);
+  width: 350px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.Streaming-gear-title:hover {
+  cursor: default;
+}
+
+.Streaming-gear {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  box-sizing:content-box;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5); 
+   /* box-shadow: 0 15px 25px 3px rgba(0, 0, 0, 0.25);   */
+  border-radius: 20px;
+  margin-bottom: 42px;
+}
+
+.Streaming-gear h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 150%;
+  margin: auto;
+  margin-top: 10px;
+  border-bottom: 2px solid  rgba(71,35,227,1);
+  height: 30px;
+  width: 160px;
+}
+
+.Streaming-gear h3:hover {
+  cursor: default;
+}
+
+.Streaming-gear-img {
+  margin: auto;
+  display: flex;
+  justify-content: center; 
+  height: 150px;
+  width: 125px;
+  margin-top: 10px;
+}
+
+.Streaming-gear p{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 90%;
+  color: #616161;
+  line-height: 20px;
+  text-align: center;
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+}
+
+.Streaming-gear p:hover {
+  cursor: default;
+}
+
+.Streaming-gear:nth-of-type(4) p {
+  top: 70%;
+}
+
+.Streaming-gear-a {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 5px 10px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, rgba(151,27,235,1) 6%, rgba(135,29,233,1) 47%, rgba(128,30,232,1) 65%, rgba(76,48,199,1) 100%);
+  color: white;
+  height: 16px;
+  margin: auto;
+  margin-top: 50px;
+  width: 100px;
+  font-size: 90%;
+}
+
+.Streaming-gear-a:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.other-streamers-box {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.other-streamers-h2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 200%;
+  padding-bottom: 10px;
+  border-bottom: 3px solid rgb(151,27,235);
+  width: 700px;
+  margin: auto;
+  margin-top: 55px;
+  margin-bottom: 50px;
+}
+
+.other-streamers-box h2:hover {
+  cursor: default;
+}
+
+.other-streamers {
+  width: 280px;
+  height: 356px;
+  box-sizing:content-box;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5); 
+   /* box-shadow: 0 15px 25px 3px rgba(0, 0, 0, 0.25);   */
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.other-streamers h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 150%;
+  margin: auto;
+  margin-top: 10px;
+  border-bottom: 2px solid  rgba(71,35,227,1);
+  height: 30px;
+  width: 160px;
+}
+
+.other-streamers-box h3:hover {
+  cursor: default;
+}
+
+.other-streamers img {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.other-streamers p {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 15px;
+  font-size: 90%;
+  line-height: 20px;
+  text-align: center; 
+  width: 200px;
+  color: #616161;
+}
+
+.other-streamers-box p:hover {
+  cursor: default;
+}
+
+.other-streamers a {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 5px 10px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, rgba(151,27,235,1) 6%, rgba(135,29,233,1) 47%, rgba(128,30,232,1) 65%, rgba(76,48,199,1) 100%);
+  color: white;
+  height: 16px;
+  margin: auto;
+  margin-top: 10px;
+  width: 100px;
+  font-size: 90%;
+}
+
+.other-streamers-box a:hover {
+  cursor: pointer;
+}
+
+#other-streamers-button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 10px 15px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, rgba(151,27,235,1) 6%, rgba(135,29,233,1) 47%, rgba(128,30,232,1) 65%, rgba(76,48,199,1) 100%);
+  color: white;
+  height: 16px;
+  margin: auto;
+  margin: 20px auto;
+  width: 200px;
+  font-size: 110%;
+}
+
+#other-streamers-button:hover {
+  cursor: pointer;
+}
+
+.footer-class {
+  background: rgb(151,27,235);
+  background: linear-gradient(90deg, rgba(151,27,235,1) 6%, rgba(135,29,233,1) 47%, rgba(128,30,232,1) 65%, rgba(76,48,199,1) 100%);
+  height: 150px;
+  display:flex;
+  justify-content: center;
+  /* padding-bottom: 100px; */
+  padding-top: 10px;
+  margin-top: 50px;
+}
+
+.social {
+display: flex;
+justify-content: space-between;
+margin: auto;
+width: 300px;
+padding-right: 50px;
+}
+
+.fa-instagram, .fa-twitter, .fa-envelope {
+  color: white;
+  padding: 10px 12px;
+  border-radius: 100%;
+  transition: 500ms;
+}
+
+
+.fa-instagram:hover, .fa-twitter:hover, .fa-envelope:hover {
+  background-color: white;
+  color: rgb(151,27,235);
+  cursor: pointer;
+}
+
+.info {
+padding-top: 30px;
+display: flex;
+justify-content: space-between;
+margin: auto;
+width: 900px;
+}
+
+.info a{
+  all: unset;
+  color: white;
+  font-size: 120%;
+}
+
+.info a:hover {
+  cursor: pointer;
+}
+
+ .copyright {
+  display: flex;
+  justify-content: center;
+  margin:auto;
+  margin-top: 20.7px;
+  font-size:13px;
+  color: white;
+}
+
+.copyright:hover {
+  cursor: default;
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+
+  nav {
+    width: 1100px;
+  }
+  
+  .tfue-info {
+    width: 1080px;
+  }
+
+  .tfue-about p {
+    width: 800px;
+  }
+
+  .tfue-img {
+    margin-left: 20px;
+  }
+
+}
+@media (min-width: 1100px) and (max-width: 1200px) {
+
+  nav {
+    width: 1030px;
+  }
+
+  nav h1 {
+    margin-left: 80px;
+  }
+  
+  .tfue-info {
+    width: 1040px;
+  }
+
+  .tfue-about p {
+    width: 750px;
+  }
+
+  .tfue-img {
+    margin-left: 15px;
+  }
+
+  .gaming-gear-box {
+    width: 1000px;
+  }
+
+  .gaming-gear {
+    width: 220px;
+  }
+
+  .PC-gear-box {
+    width: 1000px;
+  }
+
+  .PC-gear {
+    width: 220px;
+  }
+
+
+
+  .Streaming-gear-box {
+    width: 1000px;
+  }
+
+  .Streaming-gear {
+    width: 220px;
+  }
+
+  .other-streamers-box {
+    width: 800px;
+  }
+
+  .other-streamers {
+    width: 220px;
+    height: 338px;
+  }
+
+  .other-streamers img {
+    width: 180px;
+    height: 180px;
+  }
+
+}
+
+@media (min-width: 1000px) and (max-width: 1100px) {
+
+  nav {
+    width: 900px;
+  }
+
+  nav h1 {
+    margin-left: 80px;
+  }
+  
+  .tfue-info {
+    width: 900px;
+  }
+
+  .tfue-info h1 {
+    margin-left: 10px;
+  }
+
+  .tfue-about p {
+    width: 670px;
+    margin-left: 10px;
+  }
+
+  .tfue-img {
+    margin-left: 10px;
+  }
+
+  .gaming-gear-box {
+    width: 900px;
+  }
+
+  .gaming-gear {
+    width: 200px;
+  }
+
+  .PC-gear-box {
+    width: 900px;
+  }
+
+  .PC-gear {
+    width: 200px;
+  }
+
+  .PC-gear p {
+    width: 180px;
+  }
+
+  
+
+  .PC-gear-last-row {
+    width: 437px;
+  }
+
+  .Streaming-gear-box {
+    width: 900px;
+  }
+
+  .Streaming-gear {
+    width: 200px;
+  }
+
+  .other-streamers-box {
+    width: 800px;
+  }
+
+  .other-streamers {
+    width: 220px;
+    height: 338px;
+  }
+
+  .other-streamers img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .info {
+    width: 850px;
+  }
+
+}
+
+@media (min-width: 900px) and (max-width: 1000px) {
+
+  nav {
+    display: none;
+  }
+  .nav-mobile {
+    display: flex;
+  }
+
+  .logo-icon {
+    position: relative;
+    height: 1.6em;
+    width: 1.6em;
+    left: -3px;
+    bottom: 0.6rem;
+  }
+
+  .navbar-logo h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 180%;
+    line-height: 1.5em;
+    color: white;
+    font-weight:bolder;
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 50px;
+  }
+  
+  .tfue-info {
+    width: 830px;
+  }
+
+  .tfue-info h1 {
+    margin-left: 10px;
+    font-size: 180%;
+  }
+
+  .tfue-about p {
+    width: 600px;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 90%;
+  }
+
+  .tfue-img {
+    margin-left: 10px;
+    height: 170px;
+    width: 170px;
+  }
+
+  .gaming-gear-box {
+    width: 800px;
+  }
+
+  .gaming-gear {
+    width: 250px;
+  }
+
+  .gaming-gear p {
+    font-size: 85%;
+  }
+
+  .gaming-gear:nth-of-type(5) {
+    margin-left: 28px;
+  }
+
+  .PC-gear-box {
+    width: 800px;
+  }
+
+  .PC-gear {
+    width: 250px;
+  }
+
+  .PC-gear p {
+    width: 180px;
+    font-size: 85%;
+  }
+
+
+  .PC-gear:nth-of-type(10) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .Streaming-gear-box {
+    width: 800px;
+  }
+
+  .Streaming-gear {
+    width: 250px;
+  }
+
+
+
+ 
+
+  .Streaming-gear:nth-of-type(5) {
+    margin-right: auto;
+    margin-left: 25px;
+  }
+
+  .other-streamers-box {
+    width: 800px;
+  }
+
+  .other-streamers {
+    width: 250px;
+    height: 330px;
+  }
+
+  .other-streamers img {
+    width: 180px;
+    height: 180px;
+  }
+
+  #other-streamers-button {
+    height: 14px;
+    width: 190px;
+    font-size: 100%;
+  }
+
+  .info {
+    width: 750px;
+  }
+
+}
+
+@media (min-width: 800px) and (max-width: 900px) {
+
+  nav {
+    display: none;
+  }
+  .nav-mobile {
+    display: flex;
+  }
+
+  .logo-icon {
+    position: relative;
+    height: 1.6em;
+    width: 1.6em;
+    left: -3px;
+    bottom: 0.6rem;
+  }
+
+  /* .navbar-logo h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 180%;
+    line-height: 1.5em;
+    color: white;
+    font-weight:bolder;
+     bottom: 1.5rem;
+    top: 0.5em; 
+    width: 390px;
+    position: absolute;
+    left: 54%;
+top: 15.5%;
+margin-top: -100px; 
+margin-left: -230px;
+  } */
+
+  .navbar-logo h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 180%;
+    line-height: 1.5em;
+    color: white;
+    font-weight:bolder;
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 25px;
+  }
+  
+  .tfue-info {
+    width: 780px;
+    margin-top: 80px;
+  }
+
+  .tfue-info h1 {
+    margin-left: 10px;
+    font-size: 180%;
+    width: 530px;
+  }
+
+  .tfue-about p {
+    width: 580px;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  .tfue-img {
+    margin-left: 10px;
+    height: 170px;
+    width: 170px;
+  }
+
+  .gaming-gear-box {
+    width: 750px;
+  }
+
+  .gaming-gear {
+    width: 220px;
+  }
+
+  .gaming-gear-title {
+    font-size: 180%;
+  }
+
+  .gaming-gear:nth-of-type(5) {
+    margin-left: 45px;
+  }
+
+  .PC-gear-box {
+    width: 750px;
+  }
+
+  .PC-gear {
+    width: 220px;
+  }
+
+  .PC-gear-title {
+    font-size: 180%;
+  }
+
+  .PC-gear p {
+    width: 180px;
+  }
+
+
+  .PC-gear:nth-of-type(10) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .Streaming-gear-box {
+    width: 750px;
+  }
+
+  .Streaming-gear-title {
+    font-size: 180%;
+  }
+
+  .Streaming-gear {
+    width: 220px;
+  }
+
+
+
+  
+
+  .Streaming-gear:nth-of-type(5) {
+    margin-right: auto;
+    margin-left: 47px;
+  }
+
+  .other-streamers-box {
+    width: 750px;
+  }
+
+  .other-streamers {
+    width: 220px;
+    height: 330px;
+  }
+
+  .other-streamers-h2 {
+    width: 600px;
+    font-size: 180%;
+  }
+
+  .other-streamers img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .social {
+    width: 250px;
+  }
+
+  #footer-i {
+    font-size: 30px;
+  }
+
+  .info {
+    width: 700px;
+  }
+
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+
+  .homepage {
+    padding-bottom: 60px;
+  }
+
+  nav {
+    display: none;
+  }
+  .nav-mobile {
+    display: flex;
+  }
+
+  .logo-icon {
+    position: relative;
+    height: 1.6em;
+    width: 1.6em;
+    left: -3px;
+    bottom: 0.6rem;
+  }
+
+  /* .navbar-logo h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 180%;
+    line-height: 1.5em;
+    color: white;
+    font-weight:bolder;
+     bottom: 1.5rem;
+    top: 0.5em; 
+    width: 390px;
+    position: absolute;
+    left: 54%;
+top: 15.5%;
+margin-top: -100px; 
+margin-left: -220px;
+  } */
+
+  .navbar-logo h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 180%;
+    line-height: 1.5em;
+    color: white;
+    font-weight:bolder;
+    position: absolute;
+    margin-top: 13px;
+    margin-left: -25px;
+  }
+
+  .tfue-box-laptop {
+    display: none;
+  }
+
+  .tfue-box-tablet-mobile {
+    display:initial;
+  }
+
+  .tfue-box {
+    display: block;
+    margin-top: 80px;
+  }
+
+  .tfue-info {
+    all: unset;
+    display: block;
+    margin: auto;
+  }
+
+  .tfue-box h1 {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    font-size: 170%;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .tfue-img-p-box {
+    /* background-color: white; */
+    /* width: 420px; */
+    margin: auto;
+    padding: 20px 0;
+    border-radius: 25px;
+  }
+
+  .tfue-img-p-box img{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+  }
+
+  .tfue-img {
+    margin: auto;
+  }
+
+  .tfue-box p {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align:center;
+    width: 600px;
+    margin-top: 20px;
+    color: #616161;
+    line-height: 20px;
+    background-color: white;
+    padding: 15px 15px;
+    border-radius: 25px;
+  }
+
+  .gaming-gear-box {
+    width: 680px;
+  }
+
+  .gaming-gear {
+    width: 210px;
+  }
+
+  .gaming-gear-title {
+    font-size: 160%;
+  }
+
+  .gaming-gear:nth-of-type(5) {
+    margin-left: 27px;
+  }
+
+  .PC-gear-box {
+    width: 680px;
+  }
+
+  .PC-gear {
+    width: 210px;
+  }
+
+  .PC-gear-title {
+    font-size: 160%;
+  }
+
+  .PC-gear p {
+    width: 180px;
+  }
+
+
+
+  .PC-gear:nth-of-type(10) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .Streaming-gear-box {
+    width: 680px;
+  }
+
+  .Streaming-gear-title {
+    font-size: 160%;
+  }
+
+  .Streaming-gear {
+    width: 210px;
+  }
+
+
+
+  
+
+  .Streaming-gear:nth-of-type(5) {
+    margin-right: auto;
+    margin-left: 27px;
+  }
+
+  .other-streamers-box {
+    width: 680px;
+  }
+
+  .other-streamers {
+    width: 210px;
+    height: 330px;
+  }
+
+  .other-streamers-h2 {
+    width: 600px;
+    font-size: 160%;
+  }
+
+  .other-streamers img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .social {
+    width: 250px;
+    margin: auto;
+    margin-left: 220px;
+  }
+
+  #footer-i {
+    font-size: 30px;
+  }
+
+  .info {
+    width: 600px;
+    margin-left: 20px;
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+
+  .homepage {
+    padding-bottom: 60px;
+  }
+
+  nav {
+    display: none;
+  }
+  .nav-mobile {
+    display: flex;
+  }
+
+  .logo-icon {
+    position: relative;
+    height: 1.6em;
+    width: 1.6em;
+    left: -3px;
+    bottom: 0.6rem;
+  }
+
+  /* .navbar-logo h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 180%;
+    line-height: 1.5em;
+    color: white;
+    font-weight:bolder;
+     bottom: 1.5rem;
+    top: 0.5em; 
+    width: 390px;
+    position: absolute;
+    left: 54%;
+top: 15.5%;
+margin-top: -100px; 
+margin-left: -220px;
+  } */
+
+  .navbar-logo h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 180%;
+    line-height: 1.5em;
+    color: white;
+    font-weight:bolder;
+    position: absolute;
+    margin-top: 13px;
+    margin-left: -75px;
+  }
+
+  .tfue-box-laptop {
+    display: none;
+  }
+
+  .tfue-box-tablet-mobile {
+    display:initial;
+  }
+
+  .tfue-box {
+    display: block;
+    margin-top: 80px;
+  }
+
+  .tfue-info {
+    all: unset;
+    display: block;
+    margin: auto;
+  }
+
+  .tfue-box h1 {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    font-size: 170%;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .tfue-img-p-box {
+    /* background-color: white; */
+    /* width: 420px; */
+    margin: auto;
+    padding: 20px 0;
+    border-radius: 25px;
+  }
+
+  .tfue-img-p-box img{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+  }
+
+  .tfue-img {
+    margin: auto;
+  }
+
+  .tfue-box p {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align:center;
+    width: 500px;
+    margin-top: 20px;
+    color: #616161;
+    line-height: 20px;
+    background-color: white;
+    padding: 15px 15px;
+    border-radius: 25px;
+  }
+
+  .gaming-gear-box {
+    width: 510px;
+  }
+
+  .gaming-gear {
+    width: 230px;
+  }
+
+  .gaming-gear-title {
+    font-size: 160%;
+  }
+
+  .gaming-gear:nth-of-type(5) {
+    margin-left: 0;
+  }
+
+  .PC-gear-box {
+    width: 510px;
+  }
+
+  .PC-gear {
+    width: 230px;
+  }
+
+  .PC-gear-title {
+    font-size: 160%;
+  }
+
+  .PC-gear p {
+    width: 180px;
+  }
+
+
+
+  .PC-gear:nth-of-type(10) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .Streaming-gear-box {
+    width: 510px;
+  }
+
+  .Streaming-gear-title {
+    font-size: 160%;
+  }
+
+  .Streaming-gear {
+    width: 230px;
+  }
+
+
+
+  
+
+  .Streaming-gear:nth-of-type(5) {
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  .other-streamers-box {
+    width: 510px;
+  }
+
+  .other-streamers {
+    width: 230px;
+    height: 330px;
+  }
+
+  .other-streamers-h2 {
+    width: 510px;
+    font-size: 160%;
+  }
+
+  .other-streamers img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .social {
+    width: 250px;
+    margin: auto;
+    margin-left: 150px;
+  }
+
+  #footer-i {
+    font-size: 30px;
+  }
+
+  .info {
+    width: 500px;
+    margin-left: 20px;
+  }
+
+  .info a {
+    font-size: 100%;
+  }
+
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+
+  .homepage {
+    padding-bottom: 60px;
+  }
+
+  nav {
+    display: none;
+  }
+  .nav-mobile {
+    display: flex;
+  }
+
+  .logo-icon {
+    position: relative;
+    height: 1.6em;
+    width: 1.6em;
+    left: -3px;
+    bottom: 0.6rem;
+  }
+
+  /* .navbar-logo h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 180%;
+    line-height: 1.5em;
+    color: white;
+    font-weight:bolder;
+     bottom: 1.5rem;
+    top: 0.5em; 
+    width: 390px;
+    position: absolute;
+    left: 54%;
+top: 15.5%;
+margin-top: -100px; 
+margin-left: -220px;
+  } */
+
+  .navbar-logo h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 180%;
+    line-height: 1.5em;
+    color: white;
+    font-weight:bolder;
+    position: absolute;
+    margin-top: 13px;
+    margin-left: -130px;
+  }
+
+  .tfue-box-laptop {
+    display: none;
+  }
+
+  .tfue-box-tablet-mobile {
+    display:initial;
+  }
+
+  .tfue-box {
+    display: block;
+    margin-top: 80px;
+  }
+
+  .tfue-info {
+    all: unset;
+    display: block;
+    margin: auto;
+  }
+
+  .tfue-box h1 {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    font-size: 170%;
+    font-weight: 800;
+    color: white;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 495px;
+  }
+
+  .tfue-img-p-box {
+    /* background-color: white; */
+    /* width: 420px; */
+    margin: auto;
+    padding: 20px 0;
+    border-radius: 25px;
+  }
+
+  .tfue-img-p-box img{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+  }
+
+  .tfue-img {
+    margin: auto;
+  }
+
+  .tfue-box p {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align:center;
+    width: 432px;
+    margin-top: 20px;
+    color: #616161;
+    line-height: 25px;
+    background-color: white;
+    padding: 15px 15px;
+    border-radius: 25px;
+  }
+
+  .gaming-gear-box {
+    width: 475px;
+  }
+
+  .gaming-gear {
+    width: 230px;
+  }
+
+  .gaming-gear-title {
+    font-size: 160%;
+  }
+
+  .gaming-gear:nth-of-type(5) {
+    margin-left: 0;
+  }
+
+  .PC-gear-box {
+    width: 475px;
+  }
+
+  .PC-gear {
+    width: 230px;
+  }
+
+  .PC-gear-title {
+    font-size: 160%;
+  }
+
+  .PC-gear p {
+    width: 180px;
+  }
+
+
+
+  .PC-gear:nth-of-type(10) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .Streaming-gear-box {
+    width: 475px;
+  }
+
+  .Streaming-gear-title {
+    font-size: 160%;
+  }
+
+  .Streaming-gear {
+    width: 230px;
+  }
+
+
+
+  
+
+  .Streaming-gear:nth-of-type(5) {
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  .other-streamers-box {
+    width: 475px;
+  }
+
+  .other-streamers {
+    width: 230px;
+    height: 330px;
+  }
+
+  .other-streamers-h2 {
+    width: 430px;
+    font-size: 160%;
+    line-height: 28px;
+  }
+
+  .other-streamers img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .social {
+    width: 250px;
+    margin: auto;
+    margin-left: 150px;
+  }
+
+  #footer-i {
+    font-size: 30px;
+  }
+
+  .info {
+    width: 450px;
+    margin-left: 20px;
+  }
+
+  .info a {
+    font-size: 100%;
+  }
+
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+
+  .homepage {
+    padding-bottom: 60px;
+  }
+
+  nav {
+    display: none;
+  }
+  .nav-mobile {
+    display: flex;
+  }
+
+  .logo-icon {
+    position: relative;
+    height: 1.6em;
+    width: 1.6em;
+    left: -3px;
+    bottom: 0.6rem;
+  }
+
+  /* .navbar-logo h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 180%;
+    line-height: 1.5em;
+    color: white;
+    font-weight:bolder;
+     bottom: 1.5rem;
+    top: 0.5em; 
+    width: 390px;
+    position: absolute;
+    left: 54%;
+top: 15.5%;
+margin-top: -100px; 
+margin-left: -205px;
+  } */
+
+  .navbar-logo h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 180%;
+    line-height: 1.5em;
+    color: white;
+    font-weight:bolder;
+    position: absolute;
+    margin-top: 13px;
+    margin-left: -180px;
+  }
+
+  .tfue-box-laptop {
+    display: none;
+  }
+
+  .tfue-box-tablet-mobile {
+    display:initial;
+  }
+
+  .tfue-box {
+    display: block;
+    margin-top: 50px;
+  }
+
+  .tfue-info {
+    display: flex;
+    justify-content: center;
+    all: unset;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    width: 390px;
+  }
+
+  .tfue-box h1 {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 170%;
+    font-weight: 800;
+    color: white;
+    width: 390px;
+    line-height: 35px;
+  }
+
+  .tfue-img-p-box {
+    /* background-color: white; */
+    /* width: 420px; */
+    margin: auto;
+    padding: 20px 0;
+    border-radius: 25px;
+  }
+
+  .tfue-img-p-box img{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+  }
+
+  .tfue-img {
+    margin: auto;
+  }
+
+  .tfue-box p {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align:center;
+    width: 332px;
+    margin-top: 20px;
+    color: #616161;
+    line-height: 25px;
+    background-color: white;
+    padding: 15px 15px;
+    border-radius: 25px;
+  }
+
+  .gaming-gear-box {
+    width: 260px;
+  }
+
+  .gaming-gear {
+    width: 260px;
+  }
+
+  .gaming-gear-title {
+    font-size: 160%;
+    width: 230px;
+  }
+
+  .gaming-gear:nth-of-type(5) {
+    margin-left: 0;
+  }
+
+  .PC-gear-box {
+    width: 260px;
+  }
+
+  .PC-gear {
+    width: 260px;
+  }
+
+  .PC-gear-title {
+    font-size: 160%;
+    width: 230px;
+  }
+
+  .PC-gear p {
+    width: 180px;
+  }
+
+
+
+  .PC-gear:nth-of-type(10) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .Streaming-gear-box {
+    width: 260px;
+  }
+
+  .Streaming-gear-title {
+    font-size: 160%;
+    width: 230px;
+  }
+
+  .Streaming-gear {
+    width: 260px;
+  }
+
+
+
+  
+
+  .Streaming-gear:nth-of-type(5) {
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  .other-streamers-box {
+    width: 260px;
+  }
+
+  .other-streamers {
+    width: 260px;
+    height: 330px;
+  }
+
+  .other-streamers-h2 {
+    width: 370px;
+    font-size: 160%;
+    line-height: 30px;
+  }
+
+  .other-streamers img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .social {
+    width: 180px;
+    margin: auto;
+    /* margin-left: 150px; */
+    padding: 0;
+  }
+
+  #footer-i {
+    font-size: 30px;
+  }
+
+  .info {
+    width: 380px;
+  }
+
+  .info a {
+    font-size: 100%;
+  }
+
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+
+  .homepage {
+    padding-bottom: 60px;
+  }
+
+  nav {
+    display: none;
+  }
+  .nav-mobile {
+    display: flex;
+  }
+
+  #menuToggle {
+    width: 200px;
+  }
+
+  .logo-icon {
+    position: relative;
+    height: 1.6em;
+    width: 1.6em;
+    left: -3px;
+    bottom: 0.6rem;
+  }
+
+  /* .navbar-logo h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 160%;
+    line-height: 1.5em;
+    color: white;
+    font-weight:bolder;
+     bottom: 1.5rem;
+    top: 0.5em; 
+    width: 250px;
+    position: absolute;
+    left: 54%;
+top: 15.5%;
+margin-top: -95px; 
+margin-left: -125px;
+  } */
+
+  .navbar-logo h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 180%;
+    line-height: 1.5em;
+    color: white;
+    font-weight:bolder;
+    position: absolute;
+    margin-top: 13px;
+    margin-left: -120px;
+  }
+
+  .tfue-box-laptop {
+    display: none;
+  }
+
+  .tfue-box-tablet-mobile {
+    display:initial;
+  }
+
+  .tfue-box {
+    display: block;
+    margin-top: 50px;
+  }
+
+  .tfue-info {
+    display: flex;
+    justify-content: center;
+    all: unset;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    width: 290px;
+  }
+
+  .tfue-box h1 {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 170%;
+    font-weight: 800;
+    color: white;
+    width: 290px;
+    line-height: 35px;
+  }
+
+  .tfue-img-p-box {
+    /* background-color: white; */
+    /* width: 420px; */
+    margin: auto;
+    padding: 20px 0;
+    border-radius: 25px;
+  }
+
+  .tfue-img-p-box img{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+  }
+
+  .tfue-img {
+    margin: auto;
+  }
+
+  .tfue-box p {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align:center;
+    width: 232px;
+    margin-top: 20px;
+    color: #616161;
+    line-height: 25px;
+    background-color: white;
+    padding: 15px 15px;
+    border-radius: 25px;
+  }
+
+  .gaming-gear-box {
+    width: 260px;
+  }
+
+  .gaming-gear {
+    width: 260px;
+  }
+
+  .gaming-gear-title {
+    font-size: 160%;
+    width: 230px;
+  }
+
+  .gaming-gear:nth-of-type(5) {
+    margin-left: 0;
+  }
+
+  .PC-gear-box {
+    width: 260px;
+  }
+
+  .PC-gear {
+    width: 260px;
+  }
+
+  .PC-gear-title {
+    font-size: 160%;
+    width: 230px;
+  }
+
+  .PC-gear p {
+    width: 180px;
+  }
+
+
+
+  .PC-gear:nth-of-type(10) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .Streaming-gear-box {
+    width: 260px;
+  }
+
+  .Streaming-gear-title {
+    font-size: 160%;
+    width: 230px;
+  }
+
+  .Streaming-gear {
+    width: 260px;
+  }
+
+
+
+  
+
+  .Streaming-gear:nth-of-type(5) {
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+  .other-streamers-box {
+    width: 260px;
+  }
+
+  .other-streamers {
+    width: 260px;
+    height: 330px;
+  }
+
+  .other-streamers-h2 {
+    width: 290px;
+    font-size: 160%;
+    line-height: 30px;
+  }
+
+  .other-streamers img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .social {
+    width: 180px;
+    margin: auto;
+    /* margin-left: 150px; */
+    padding: 0;
+  }
+
+  #footer-i {
+    font-size: 28px;
+  }
+
+  .info {
+    width: 290px;
+  }
+
+  .info a {
+    font-size: 93%;
+  }
+
+}
