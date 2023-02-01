@@ -3,6 +3,6 @@
 
 Streamerloot has an updated list of all the gaming gear used by the most popular streamers/gamers in the world.
 
-<a src="https://streamerloot.netlify.app/">Click here to visit the site</a>
+[Click here to visit the site(https://streamerloot.netlify.app/)]
 
 
