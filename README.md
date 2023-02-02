@@ -1,7 +1,6 @@
-# Streamerloot
- Do you want to view or buy the equipment used by the most popular streamer's in the world? Then you have come to the right place.
+# Streamerloot 👾
 
-Streamerloot has an updated list of all the gaming gear used by the most popular streamers/gamers in the world.
+## Purchase The Gaming Equipment Used By The Most Popular Gamers 🎮
 
 [Click here to visit the site](https://streamerloot.netlify.app/)
 
